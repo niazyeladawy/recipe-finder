@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import classes from './singleRecipe.module.css'
 import imgnotfound from '../assests/images/notfound.png'
-import { AiOutlineHeart } from 'react-icons/ai';
 
 const SingleRecipe = ({ recipe }) => {
 
-    const { label, totalTime, calories, totalWeight, uri } = recipe.recipe;
+    const { label, totalTime, calories, totalWeight } = recipe.recipe;
 
 
 
@@ -15,7 +14,6 @@ const SingleRecipe = ({ recipe }) => {
             <h4>{label}</h4>
             <h5>Cocking Time : {totalTime} minutes</h5>
             <p>this recipe contain {calories.toFixed()} calories and wieghts {totalWeight.toFixed()}lb</p>
-            <AiOutlineHeart  />
         </div>
     )
 }
